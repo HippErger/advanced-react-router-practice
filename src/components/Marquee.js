@@ -1,8 +1,9 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 function Marquee(props) {
-  const message = "hello";
-  return (   
+  const message = props.text;
+  return (
     <marquee>{message}</marquee>
   );
 }
