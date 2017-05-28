@@ -7,7 +7,7 @@ function Profiles(props) {
     return (
       <div key={i}>
         {user.firstName} - {user.lastName}
-        <p><Link to="/profile/2">View</Link></p>
+        <p><Link to={`/profile/${user.id}`}>View</Link></p>
       </div>);
   });
   return (

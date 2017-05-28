@@ -11,34 +11,28 @@ function SideNav() {
           </Link>
         </li>
         <li>
-          <Link to="/charts"> <i className="fa fa-fw fa-bar-chart-o" />
+          <Link to="/charts">
             Charts
           </Link>
         </li>
         <li>
           <Link to="/tables">
-            <i className="fa fa-fw fa-bar-chart-o" /> Tables
+            Tables
           </Link>
         </li>
         <li>
           <Link to="/settings" >
-            <span> Settings </span>
+            Settings
           </Link>
         </li>
         <li>
-          <Link to="/marquee/ScottIsDumb" >
-            <span> Scott is dumb! </span>
-          </Link>
-        </li>
-
-        <li>
-          <Link to="/marquee/WereFucked" >
-            <span> We're Fucked. </span>
+          <Link to="/marquee/scottisdumb" >
+            Scott is dumb
           </Link>
         </li>
         <li>
           <Link to="/wall" >
-            <i className="fa fa-fw fa-bar-chart-o" /> Wall
+            Wall
           </Link>
         </li>
       </ul>

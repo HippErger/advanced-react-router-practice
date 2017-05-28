@@ -1,13 +1,13 @@
 import React from "react";
 import {
-  BrowserRouter,
+  BrowserRouter as Router,
   Route,
-  Switch,
-  Link
+  Switch
 } from "react-router-dom";
 import Charts from "./components/Charts";
 import Dashboard from "./components/Dashboard";
-import MarqueeContainer from "./containers/MarqueeContainer";
+// import MarqueeContainer from "./containers/MarqueeContainer";
+import Marquee from "./components/Marquee";
 import Profile from "./components/Profile";
 import Settings from "./components/Settings";
 import SideNav from "./components/SideNav";
@@ -19,7 +19,7 @@ import Profiles from "./components/Profiles";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <div>
         <div id="wrapper">
           <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -27,41 +27,20 @@ function App() {
             <SideNav />
           </nav>
           <div style={{backgroundColor: "white"}}>
-            {/* PUT YOUR ROUTES HERE */}
             <Route path="/charts" component={Charts} />
-            <Route path="/marquee/:text" component={MarqueeContainer} />
-            {/* <Route path="/profile/:id" component={Profile} />  */}
+            <Route path="/marquee/:text" component={Marquee} />
+            <Route path="/profile/:id" component={Profile} />
             {/* <Route path="/profiles" component={Profiles} /> */}
             <Route path="/settings" component={Settings} />
             <Route path="/tables" component={Tables} />
             <Route path="/wall" component={Wall} />
-            <Route path="/" component={Dashboard} />
+            <Route exact path="/" component={Dashboard} />
 
           </div>
         </div>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
-
-/*
-* /              -> Dashboard
-* /charts        -> Charts
-
-* /tables        -> Tables
-
-* /settings      -> Settings
-
-
-* /wall          -> Wall
-
-* /profiles      -> Profiles
-<Route path="/profiles" component={Profiles} />
-
-* /marquee/:text -> Marquee
-* /profile/:id   -> Profile
-
-*/
-
 
 export default App;
